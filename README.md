@@ -1,2 +1,17 @@
-# awssqsserviceendpoints
-Micropackage that changes boto3 to return the standard SQS service endpoints
+# awspython3serviceendpoints
+Micropackage that changes `boto3` to return the standard service endpoints
+
+This package will replace the legacy AWS endpoints for all services with
+the modern endpoints. Boto3 (really, botocore) is still using the legacy
+endpoints for some services (most notably SQS) in order to support Python
+2.6/2.7. This is unnecessary for Python 3 users, and causes problems with
+other libraries (and VPC endpoints) that have moved to the new service
+endpoints.
+
+To use, simply ensure that this library is imported prior to `boto3` being
+imported.
+
+```python
+import awspython3serviceendpoints
+import boto3
+```
