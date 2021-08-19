@@ -1,2 +1,2 @@
 include pyproject.toml
-include awspython3serviceendpoints/data/*
+include awsserviceendpoints/data/*
