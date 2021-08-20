@@ -15,6 +15,6 @@ To use, simply ensure that this library is imported prior to `boto3` being
 imported.
 
 ```python
-import awspython3serviceendpoints
+import awsserviceendpoints
 import boto3
 ```
